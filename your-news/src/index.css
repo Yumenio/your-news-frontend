@@ -1,0 +1,23 @@
+@font-face {
+  font-family: times;
+  src: url("../public/fonts/Chomsky-8MOa2.otf");
+}
+
+@font-face {
+  font-family: cheltenhamItalicBold;
+  src: url("../public/fonts/Cheltenham\ Headline\ Bold\ Italic.otf");
+}
+
+@font-face {
+  font-family: cheltenhamBold;
+  src: url("../public/fonts/Cheltenham\ Headline\ Bold.otf");
+}
+
+@font-face {
+  font-family: cheltenhamLight;
+  src: url("../public/fonts/CheltenhamStdLight.otf");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
