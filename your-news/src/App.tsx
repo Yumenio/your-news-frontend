@@ -10,12 +10,16 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 
 function App() {
+  const [token, setToken] = useState("");
+  if(!token){
+    return <Login setToken={setToken}/>
+  }
   return (
     <div className="App">
       <NavBar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/login" element= {<Login/>}/>
+        <Route path="/login" element= {<Login setToken={setToken}/>}/>
       </Routes>
     </div>
   );
