@@ -8,9 +8,11 @@ import Footer from './components/Footer';
 import { Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
 import Home from './pages/Home';
+import useToken from './hooks/useToken';
 
 function App() {
-  const [token, setToken] = useState("");
+  const{token, setToken} = useToken();
+
   if(!token){
     return <Login setToken={setToken}/>
   }
