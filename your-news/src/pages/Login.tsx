@@ -30,19 +30,19 @@ const Login = ({setToken}:{setToken:Dispatch<SetStateAction<string>>}) => {
     <div className="flex flex-col items-center">
       <form onSubmit={handleSubmit} className="flex flex-col items-center p-2">
         <label>
-          <p>Username</p>
+          <p><b>Username</b></p>
           <input className="border rounded" type="text" onChange={e=>setUsername(e.target.value)}/>
         </label>
         <label>
-          <p>Password</p>
+          <p><b>Password</b></p>
           <input className="border rounded" type="password" onChange={e=>setPassword(e.target.value)}/>
         </label>
         <div className="p-4">
-          <button className="border rounded" type="submit">Log In</button>
+          <button className="border border-gray-950 hover:border-gray-800 rounded p-2 text-white text-lg bg-gray-950 hover:bg-gray-800" type="submit">Log In</button>
         </div>
       </form>
       <div>
-        <Link to="/signup" className="rounded border p-1">Sign Up</Link>
+        <Link to="/signup" className="border border-gray-950 hover:border-gray-800 rounded p-2 text-white text-lg bg-gray-950 hover:bg-gray-800">Sign Up</Link>
       </div>
     </div>
   )
