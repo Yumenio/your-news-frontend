@@ -15,9 +15,9 @@ function App() {
   const{token, setToken} = useToken();
   return (
     <div className="App">
-      <NavBar/>
+      <NavBar token={token} setToken={setToken}/>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" element={<Home token={token}/>}/>
         <Route path="/login" element= {<Login setToken={setToken}/>}/>
         <Route path="/signup" element={<Register setToken={setToken}/>}/>
       </Routes>
