@@ -46,7 +46,7 @@ const Register = ({setToken}:{setToken:Dispatch<SetStateAction<string>>}) => {
                 <p><b>Confirm Password</b></p>
                 <input className="border rounded" type="password" onChange={(e) => setPassword2(e.target.value)}/>
             </label>
-            <button className="border rounded p-1 mt-2" type="submit">Sign Up</button>
+            <button className="border border-gray-950 hover:border-gray-800 rounded p-2 text-white text-lg bg-gray-950 hover:bg-gray-800 mt-2" type="submit">Sign Up</button>
         </form>
     </div>
   )
