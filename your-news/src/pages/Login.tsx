@@ -22,7 +22,7 @@ const Login = ({setToken}:{setToken:Dispatch<SetStateAction<string>>}) => {
     e.preventDefault();
     const token = await login({username, password});
     if(token.statusCode == 200){
-      setToken(token);
+      setToken(token.value);
       navigate("/");
     }
   }

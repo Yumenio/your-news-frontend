@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import CategorySelector from '../components/CategorySelector'
 import ArticlePreview, { News } from '../components/ArticlePreview';
 import axios from 'axios';
 import Footer from '../components/Footer';
-import useToken from '../hooks/useToken';
 
-const Home = () => {
-  const {token, setToken} = useToken();
+const Home = ({token}:{token:string|null}) => {
   const [apiResponse, setApiResponse] = useState<News|null>(null);
   const [category, setCategory] = useState(0);
   const getData = () => {
@@ -22,9 +20,10 @@ const Home = () => {
   useEffect(()=>{
     getData();
     console.log("App", category);
-  }, [category])
+  }, [category, token])
+  
 
-  if(!token){
+  if(!token || token==""){
     return (
       <h1 className="flex flex-col items-center mt-40 text-3xl">
         Please Login
